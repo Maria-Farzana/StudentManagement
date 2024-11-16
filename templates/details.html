@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{details.name}}</title>
+</head>
+<body>
+    <h1>details:{{details.name}}</h1>
+            <p>{{details.name}}</p>
+            <p>{{details.roll_number}}</p>
+            <p>{{details.department}}</p>
+            <p>{{details.email}}</p>
+            <p>{{details.admission_date}}</p>
+            <a href="{% url 'update' details.id %}">
+                <button>Update</button>
+            </a>
+            <a href="{% url 'delete' details.id %}">
+                <button>delete</button>
+            </a>
+   
+</body>
+</html>

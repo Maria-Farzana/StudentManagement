@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="4">
+        {% for i in maria %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.roll_number}}</td>
+            <td>{{i.department}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.admission_date}}</td>
+            <td>{{i.details}}</td>
+            <td>
+                <a href="{% url 'details' i.id %}">{{i.details}}</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'upload' %}">
+        <button>Upload</button>
+    </a>
+</body>
+</html>
